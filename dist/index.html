@@ -9,54 +9,67 @@
 </head>
 
 <body class="bg-white">
-    <!-- Navbar top -->
-    <div class="bg-customBlue text-white">
-        <nav class="container mx-auto flex justify-between items-center p-4">
-            <!-- Logo -->
-            <div class="mr-[50px]">
-                <img src="/images/logo.png" alt="logo" class="h-10">
-            </div>
+ 
+<!-- Navbar top -->
+<div class="bg-customBlue text-white relative">
+  <nav class="container mx-auto flex justify-between items-center p-4">
+      <!-- Logo -->
+      <div class="mr-[50px] sm:mr-6 md:mr-[50px]">
+          <img src="/images/logo.png" alt="logo" class="h-10 sm:h-10">
+      </div>
 
-            <div class="flex px-12 ml-auto -mr-4">
-                <img src="/images/phone (1) 1.png" alt="phone" class="mr-1 mt-1 h-4 transform -rotate-10">
-                <p class="font-medium text-[17px]">800-569-2754</p>
-            </div>
+      <!-- Phone info -->
+      <div class="hidden sm:flex px-12 sm:px-8 ml-auto -mr-4">
+          <img src="/images/phone (1) 1.png" alt="phone" class="mr-1 mt-1 h-4 transform -rotate-10">
+          <p class="font-medium text-[17px]">800-569-2754</p>
+      </div>
 
-            <div class="mr-9">
-                <a href="#" class="text-customYellow outline outline-1 py-2 px-2 font-medium">REQUEST A FREE QUOTE</a>
-            </div>
-        </nav>
-    </div>
+      <!-- Quote Button -->
+      <div class="mr-9 sm:mr-9">
+          <a href="#" class="text-customYellow outline outline-1 py-2 px-2 font-medium">REQUEST A FREE QUOTE</a>
+      </div>
 
-    <!-- Navbar -->
-    <div>
-        <ul class="flex space-x-5 ml-14 p-4">
-            <li><a href="#" class="text-customBlue font-bold uppercase text-sm leading-6 px-4 font-montserrat">SEO</a></li>
-            <li><a href="#" class="text-customBlue font-bold uppercase text-sm leading-6 px-4 font-montserrat">PPC</a></li>
-            <li><a href="#" class="text-customBlue font-bold uppercase text-sm leading-6 px-4 font-montserrat">Reputation Management</a></li>
-            <li><a href="#" class="text-customBlue font-bold uppercase text-sm leading-6 px-4 font-montserrat">Social Media</a></li>
-            <li><a href="#" class="text-customBlue font-bold uppercase text-sm leading-6 px-4 font-montserrat">Web Development</a></li>
-            <li><a href="#" class="text-customBlue font-bold uppercase text-sm leading-6 px-4 font-montserrat">Marketing Automation</a></li>
-            <li><a href="#" class="text-customBlue font-bold uppercase text-sm leading-6 px-4 font-montserrat">Industries</a></li>
-            <li><a href="#" class="text-customBlue font-bold uppercase text-sm leading-6 px-4 font-montserrat">About DMA</a></li>
-        </ul>
-        <hr class="mx-10 bg-gray-700 border-t-2">
-    </div>
+      <!-- Hamburger Icon for Small Screens -->
+      <label class="absolute right-0 mt-1 cursor-pointer text-xl sm:hidden text-white" for="navbar-open">
+          <span class="sr-only">Toggle Navigation</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="0.88em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 448 512">
+              <path fill="currentColor"
+                  d="M0 96c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm448 160c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32 14.3 32 32z" />
+          </svg>
+      </label>
+  </nav>
+</div>
+
+<!-- Navbar -->
+<input class="peer hidden" type="checkbox" id="navbar-open" />
+<nav aria-label="Header Navigation" class="peer-checked:block hidden sm:block bg-customBlue sm:bg-white sm:text-customBlue text-white pl-2 py-6 sm:py-0">
+  <ul class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-5 ml-14 p-4">
+      <li><a href="#" class="font-bold uppercase text-sm leading-6 px-4 font-montserrat">SEO</a></li>
+      <li><a href="#" class="font-bold uppercase text-sm leading-6 px-4 font-montserrat">PPC</a></li>
+      <li><a href="#" class="font-bold uppercase text-sm leading-6 px-4 font-montserrat">Reputation Management</a></li>
+      <li><a href="#" class="font-bold uppercase text-sm leading-6 px-4 font-montserrat">Social Media</a></li>
+      <li><a href="#" class="font-bold uppercase text-sm leading-6 px-4 font-montserrat">Web Development</a></li>
+      <li><a href="#" class="font-bold uppercase text-sm leading-6 px-4 font-montserrat">Marketing Automation</a></li>
+      <li><a href="#" class="font-bold uppercase text-sm leading-6 px-4 font-montserrat">Industries</a></li>
+      <li><a href="#" class="font-bold uppercase text-sm leading-6 px-4 font-montserrat">About DMA</a></li>
+  </ul>
+  <hr class="hidden sm:block sm:mx-10 sm:bg-gray-700 sm:border-t-2">
+</nav>
 
     <!-- About Us Section -->
     <div class="ml-20 pr-36 pt-20 pb-32">
-        <p class="uppercase font-bold font-sans text-customBlueLight tracking-7px text-sm">About us</p>
-        <h1 class="uppercase font-bold text-customBlue text-6xl font-lato leading-[72.8px] mt-2">Our Commitment</h1>
-        <p class="font-DMSans text-base-lg mt-3 ml-2 font-light tracking-wide text-justify leading-normal">
+        <p class="uppercase font-bold font-sans text-customBlueLight tracking-7px text-sm  sm:ml-0">About us</p>
+        <h1 class="uppercase font-bold text-customBlue text-3xl sm:text-6xl font-lato leading-[60px] sm:leading-[72.8px] mt-2 sm:ml-0" >Our Commitment</h1>
+        <p class="font-DMSans text-base-lg mt-3  sm:ml-2 font-light tracking-wide text-justify sm:text-justify leading-normal w-96 sm:w-auto">
             We’re constantly on the lookout for the brightest people from all over the world. People who are as trusted as they are talented, and as passionate about their work as they are about their team. People who want to make marketing magic happen for legendary clients.
         </p>
     </div>
 
     <!-- Comparison Section -->
-    <div class="flex mr-12 ml-12 -mt-4 mb-4 space-x-16 items-start">
+    <div class="flex flex-col sm:flex-row sm:mr-12 sm:ml-12 -mt-10 sm:-mt-4 sm:mb-4 sm:space-x-16 sm:items-start">
         <!-- Left Column -->
         <div class="flex-1 space-y-2">
-            <div class="flex items-center space-x-2">
+            <div class="flex flex-col sm:flex-row items-center space-x-2">
                 <div>
                     <img src="/images/brainstroming (1).png" alt="Brainstorming" class="w-24 h-auto mx-auto">
                 </div>
@@ -103,13 +116,13 @@
         </div>
 
         <!-- VS Image -->
-        <div class="flex justify-start pl-16">
-            <img src="/images/vs.png" alt="Versus" class="w-[150px] h-auto -ml-16">
+        <div class="sm:flex sm:justify-start sm:pl-16 ">
+            <img src="/images/vs.png" alt="Versus" class="sm:w-[150px] sm:h-auto sm:-ml-16 ml-56 mt-10 mb-10">
         </div>
 
         <!-- Right Column -->
         <div class="flex-1 space-y-2">
-            <div class="flex items-center space-x-2">
+            <div class="flex flex-col sm:flex-row items-center space-x-2">
                 <div>
                     <img src="/images/uncommon.png" alt="Uncommon Culture" class="w-24 h-auto mx-auto">
                 </div>
@@ -157,10 +170,10 @@
     </div>
 
     <!--Photos Section-->
-    <div class="container mx-auto px-4 mt-14">
+    <div class="sm:container sm:mx-auto sm:px-4 sm:mt-14">
       <!-- First Row -->
-      <div class="grid grid-cols-3 gap-4">
-        <div class="relative col-span-1 p-4">
+      <div class="sm:grid sm:grid-cols-3 sm:gap-4">
+        <div class="relative sm:col-span-1 sm:p-4 p-14">
           <img src="/images/box1.png" alt="Box Image" class="w-full h-auto object-cover">
           <div class="absolute inset-0 flex flex-col text-center items-center p-4 text-white">
             <h5 class="mt-[210px] text-white text-[1.45rem] font-bold w-80">
@@ -172,11 +185,11 @@
           </div>
         </div>
     
-        <div class="col-span-1 p-4">
+        <div class="relative sm:col-span-1 p-14 sm:p-4 -mt-20 sm:-mt-0">
           <img src="/images/box2.png" alt="Box Image" class="w-full h-full object-cover">
         </div>
     
-        <div class="relative col-span-1 p-4">
+        <div class="relative sm:col-span-1 sm:p-4 p-14 -mt-20 sm:-mt-0">
           <img src="/images/box3.png" alt="Box Image" class="w-full h-full object-cover">
           <div class="absolute inset-0 flex flex-col text-left items-center p-4 text-white">
             <h5 class="mt-[210px] ml-10 text-white text-[1.45rem] font-bold w-80">
@@ -190,31 +203,32 @@
       </div>
     
       <!-- Second Row -->
-      <div class="grid grid-cols-3 gap-4 mt-4">
-        <div class="relative col-span-2 p-4">
-          <img src="/images/purplbg.png" alt="Box Image" class="w-full h-full object-cover">
+      <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:mt-4">
+        <div class="relative sm:col-span-2 p-14 sm:p-4">
+          <img src="/images/purplbg.png" alt="Box Image" class="w-full h-80 sm:w-full sm:h-full object-cover">
           <div class="absolute inset-0 flex flex-col text-center items-center p-4 text-white">
-            <h3 class="block mt-[4em] mb-[1em] text-[1.67em] font-bold w-full text-white">
+            <h3 class="block mt-[4em] mb-[1em] text-[1.25rem] sm:text-[1.67em] font-bold w-96 sm:w-full text-white">
               They’re like this one-stop shop for all things website-related. They took care of hiring a subject matter expert to write content about technical diving.
             </h3>
-            <h4 class="mb-[1em] w-full text-white block -mt-[5px] font-bold text-[1.275rem]">
+            <h4 class="mb-[1em] w-full text-white block -mt-[5px] font-bold text-[1rem] sm:text-[1.275rem]">
               Scott Temple
             </h4>
-            <p class="block text-gray-300 text-xl font-semibold text-center">
+            <p class="block text-gray-300 text-base sm:text-xl font-semibold text-center">
               Client
             </p>
           </div>
         </div>
+        
     
-        <div class="col-span-1 p-4">
-          <img src="/images/box5.png" alt="Box Image" class="w-full h-full object-cover">
+        <div class="relative sm:col-span-1 sm:p-4 p-14 -mt-20 sm:-mt-0">
+          <img src="/images/box5.png" alt="Box Image" class="w-full h-full object-cover ">
         </div>
       </div>
     
       <!-- Third Row -->
-      <div class="grid grid-cols-3 gap-4 mt-4">
-        <div class="relative col-span-1 p-4">
-          <img src="/images/box1.png" alt="Box Image" class="w-full h-full object-cover">
+      <div class="sm:grid sm:grid-cols-3 sm:gap-4">
+        <div class="relative sm:col-span-1 sm:p-4 p-14">
+          <img src="/images/box1.png" alt="Box Image" class="w-full h-auto object-cover">
           <div class="absolute inset-0 flex flex-col text-left items-center p-4 text-white">
             <h5 class="mt-[210px] text-white text-[1.45rem] font-bold w-80">
               Get effective SEO strategies tailored to your needs.
@@ -224,17 +238,17 @@
             </p>
           </div>
         </div>
-    
-        <div class="relative col-span-2 p-4">
-          <img src="/images/box.png" alt="Box Image" class="w-full h-full object-cover">
-          <div class="absolute inset-0 flex flex-col text-center p-4 text-white w-2/3">
-            <h3 class="block mt-[4em] mb-[1em] text-[1.67em] font-bold w-full text-white">
+
+        <div class="relative sm:col-span-2 p-14 sm:p-4 -mt-20 sm:-mt-0">
+          <img src="/images/box.png" alt="Box Image" class="w-full h-80 sm:w-full sm:h-full object-cover">
+          <div class="absolute inset-0 flex flex-col text-center items-center p-4 text-white">
+            <h3 class="block mt-[4em] mb-[1em] text-[1.25rem] sm:text-[1.67em] font-bold w-96 sm:w-full text-white">
               They’re like this one-stop shop for all things website-related. They took care of hiring a subject matter expert to write content about technical diving.
             </h3>
-            <h4 class="mb-[1em] w-full text-white block -mt-[5px] font-bold text-[1.275rem] text-center">
+            <h4 class="mb-[1em] w-full text-white block -mt-[5px] font-bold text-[1rem] sm:text-[1.275rem]">
               Michael Tinsley
             </h4>
-            <p class="block text-gray-300 text-xl font-semibold text-center">
+            <p class="block text-gray-300 text-base sm:text-xl font-semibold text-center">
               Client
             </p>
           </div>
@@ -242,11 +256,11 @@
       </div>
     
       <!-- Fourth Row -->
-      <div class="grid grid-cols-3 gap-4 mt-4">
-        <div class="relative col-span-1 p-4">
+      <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:mt-4">
+        <div class="relative sm:col-span-1 sm:p-4 p-14">
           <img src="/images/box8.png" alt="Box Image" class="w-full h-full object-cover">
           <div class="absolute inset-0 flex flex-col text-center items-center p-4 text-white">
-            <h5 class="mt-10 text-white text-[1.45rem] font-bold w-80">
+            <h5 class="mt-16 sm:mt-10 text-white text-[1.45rem] font-bold w-80">
               Automate your marketing
             </h5>
             <p class="ml-4 block text-white font-medium mt-[6px] leading-[1.625] text-[1.125rem] text-left">
@@ -258,10 +272,10 @@
           </div>
         </div>
     
-        <div class="relative col-span-1 p-4">
+        <div class="relative sm:col-span-1 sm:p-4 p-14 -mt-20 sm:-mt-0">
           <img src="/images/box9.png" alt="Box Image" class="w-full h-full object-cover">
           <div class="absolute inset-0 flex flex-col text-center items-center p-4 text-white">
-            <h5 class="mt-10 text-white text-[1.45rem] font-bold w-80">
+            <h5 class="mt-16 sm:mt-10 text-white text-[1.45rem] font-bold w-80">
               Grow your following online.
             </h5>
             <p class="ml-4 block text-white font-medium mt-[6px] leading-[1.625] text-[1.125rem] text-center">
@@ -273,10 +287,10 @@
           </div>
         </div>
     
-        <div class="relative col-span-1 p-4">
+        <div class="relative sm:col-span-1 sm:p-4 p-14 -mt-20 sm:-mt-0">
           <img src="/images/box10.png" alt="Box Image" class="w-full h-full object-cover">
           <div class="absolute inset-0 flex flex-col text-center items-center p-4 text-white">
-            <h5 class="mt-10 text-white text-[1.45rem] font-bold w-80">
+            <h5 class="mt-16 sm:mt-10 text-white text-[1.45rem] font-bold w-80">
               Get clicks that convert.
             </h5>
             <p class="ml-4 block text-white font-medium mt-[6px] leading-[1.625] text-[1.125rem] text-left">
@@ -290,10 +304,10 @@
       </div>
     
       <!-- Fifth Row -->
-      <div class="grid grid-cols-3 gap-4 mt-4">
-        <div class="relative col-span-1 p-4">
+      <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:mt-4">
+        <div class="relative sm:col-span-1 sm:p-4 p-14">
           <img src="/images/box11.png" alt="Box Image" class="w-full h-full object-cover">
-          <div class="absolute inset-0 flex flex-col text-center items-center p-4 text-white">
+          <div class="absolute inset-0 flex flex-col text-center items-center p-4 text-white mt-28 sm:mt-0">
             <h5 class="mt-[210px] text-white text-[1.45rem] font-bold w-80">
               Build and maintain a positive reputation for your brand.
             </h5>
@@ -302,17 +316,18 @@
             </h6>
           </div>
         </div>
-    
-        <div class="relative col-span-2 p-4">
-          <img src="/images/box12.png" alt="Box Image" class="w-full h-full object-cover">
+
+
+        <div class="relative sm:col-span-2 p-14 sm:p-4 -mt-20 sm:-mt-0">
+          <img src="/images/box12.png" alt="Box Image" class="w-full h-80 sm:w-full sm:h-full object-cover">
           <div class="absolute inset-0 flex flex-col text-center items-center p-4 text-white">
-            <h3 class="block mt-[4em] mb-[1em] text-[1.67em] font-bold w-full text-white">
+            <h3 class="block mt-[4em] mb-[1em] text-[1.25rem] sm:text-[1.67em] font-bold w-96 sm:w-full text-white">
               Digital Marketing Agency reanalyzed keyword prioritization and campaign development by getting more keywords that would help conversion from people doing Google searches.
             </h3>
-            <h4 class="mb-[1em] w-full text-white block -mt-[5px] font-bold text-[1.275rem]">
+            <h4 class="mb-[1em] w-full text-white block -mt-[5px] font-bold text-[1rem] sm:text-[1.275rem]">
               Jamal Harris
             </h4>
-            <p class="block text-gray-300 text-xl font-semibold text-left">
+            <p class="block text-gray-300 text-base sm:text-xl font-semibold text-center">
               Client
             </p>
           </div>
@@ -339,25 +354,26 @@
   <div class="pt-7">
     <form class="space-y-4 text-center mx-auto mt-8">
       <!-- Name Inputs -->
-      <div class="flex gap-12 justify-center mx-auto max-w-4xl">
+      <div class="flex flex-col sm:flex-row sm:gap-12 gap-5 sm:justify-center items-center sm:mx-auto sm:max-w-4xl">
         <input type="text" placeholder="First Name" class="p-3 border border-gray-300 w-full max-w-xs focus:outline-none focus:ring-0">
         <input type="text" placeholder="Last Name" class="p-3 border border-gray-300 w-full max-w-xs focus:outline-none focus:ring-0">
       </div>
+      
 
       <!-- Email and Phone Inputs -->
-      <div class="flex gap-12 justify-center pt-7 mx-auto max-w-4xl">
+      <div class="flex flex-col sm:flex-row sm:gap-12 gap-5 sm:justify-center items-center sm:mx-auto sm:max-w-4xl">
         <input type="email" placeholder="Email" class="p-3 pl-5 border border-gray-300 w-full max-w-xs focus:outline-none focus:ring-0">
         <input type="number" placeholder="+92" class="p-3 border border-gray-300 w-full max-w-xs focus:outline-none focus:ring-0">
       </div>
 
       <!-- LinkedIn Inputs-->
-      <div class="bg-white p-6 border border-gray-200 flex justify-center items-center gap-16 mx-auto w-[690px]">
-        <input type="url" placeholder="LinkedIn Profile URL" class="pt-2 pb-2 pl-3 pr-4 border border-gray-300 focus:outline-none focus:ring-0">
+      <div class="bg-white p-6 border border-gray-200 flex flex-col sm:flex-row justify-center items-center sm:gap-16 gap-7 mx-auto w-full max-w-[690px]">
+        <input type="url" placeholder="LinkedIn Profile URL" class="pt-2 pb-2 pl-3 pr-4 border border-gray-300 focus:outline-none focus:ring-0 w-80 sm:w-auto">
         <p class="text-black bg-gray-200 p-5 w-14 h-14 rounded-full font-serif font-normal text-sm flex items-center justify-center">
           <b>OR</b>
         </p>      
-        <button type="button" class="bg-customBlue text-white pl-6 pr-6 pt-2 pb-2 font-medium">Upload Resume</button>
-      </div>
+        <button type="button" class="bg-customBlue text-white pl-6 pr-6 pt-2 pb-2 font-medium w-80 sm:w-auto">Upload Resume</button>
+      </div>      
 
       <!-- Submit Button -->
       <div class="pt-10">
@@ -377,7 +393,7 @@
   </div>
 
   <!-- Team Members Section -->
-  <div class="flex flex-wrap justify-center gap-72 mb-10">
+  <div class="flex flex-wrap justify-center gap-20 sm:gap-72 mb-10">
     <!-- Team Member 1 -->
     <div class="text-left flex flex-col items-center">
       <img src="/images/Client1.jpeg" alt="Josh Moody" class="mb-4">
@@ -414,32 +430,33 @@
 </div>
 
 <!--Call to Action Section-->
-<div class="bg-customBlue flex h-[455px] w-[95%] mx-auto px-[3%]">
-  <div class="text-left">
-    <h3 class="mt-[50px] text-[4.25rem] leading-none font-lato text-white font-black">
+<div class="bg-customBlue flex flex-col sm:flex-row h-auto sm:h-[455px] w-[95%] mx-auto px-[3%]">
+  <div class="text-left w-full sm:w-1/2">
+    <h3 class="mt-[50px] text-[2.5rem] sm:text-[4.25rem] leading-none font-lato text-white font-black">
       Book a meeting
     </h3>
-    <span class="text-[4rem] leading-none font-lato text-yellow-400 font-black my-[20px]">
+    <span class="text-[2.25rem] sm:text-[4rem] leading-none font-lato text-yellow-400 font-black my-[20px]">
       to get started
     </span>
     <p class="pt-[10px] font-DMSans leading-loose font-normal text-white text-[1.25rem]">
       Speak to an expert to find out how Digital Consumer Intelligence will change the way you work.
     </p>
-    <button class="mt-[30px] py-[15px] px-[20px] bg-[#f3ae24] font-DMSans font-bold text-black cursor-pointer border-none outline-none">
+    <button class="mb-10 sm:mb-auto mt-[30px] py-[15px] px-[20px] bg-[#f3ae24] font-DMSans font-bold text-black cursor-pointer border-none outline-none">
       BOOK A MEETING
     </button>
   </div>
-  <div class="mt-[1px]">
+  <div class="hidden sm:block w-full sm:w-1/2 mt-[1px]">
     <img src="/images/graph.webp" alt="" class="max-w-fit h-auto">
   </div>
 </div>
 
+
 <!--Our Clients/Customers Section-->
-<div class="flex flex-wrap justify-center">
+<div class="flex flex-col items-center">
   <p class="mt-12 text-[0.875rem] leading-[1.25rem] font-bold block font-DMSans">
     TRUSTED BY THE BEST CLIENTELE LIST:
   </p>
-  <div class="w-[73%] flex justify-around mt-10">
+  <div class="w-[73%] grid grid-cols-3 sm:grid-cols-6 gap-4 mt-10">
     <img src="/images/image1.svg" alt="" class="w-[100px] h-[30px]">
     <img src="/images/image2.png" alt="" class="w-[100px] h-[30px]">
     <img src="/images/icon3.svg" alt="" class="w-[100px] h-[30px]">
@@ -452,9 +469,10 @@
   </div>
 </div>
 
+
 <!--Footer Section-->
-<div class="flex p-8 ml-12 justify-center space-x-0">
-  <div class="w-1/2">
+<div class="flex flex-col sm:flex-row p-8 ml-12 justify-center space-x-0">
+  <div class="w-1/2 mt-6 sm:mt-0">
     <span class="block text-customBlue font-lato text-lg font-extrabold leading-6">WHAT WE DO</span>
     <p class="mt-2 text-customBlue font-DMSans text-sm font-normal cursor-pointer">SEO</p>
     <p class="mt-2 text-customBlue font-DMSans text-sm font-normal cursor-pointer">PPC</p>
@@ -464,7 +482,7 @@
     <p class="mt-2 text-customBlue font-DMSans text-sm font-normal cursor-pointer">Marketing Automation</p>
   </div>
 
-  <div class="w-1/2">
+  <div class="w-1/2 mt-6 sm:mt-0">
     <span class="block text-customBlue font-lato text-lg font-extrabold leading-6">Industries</span>
     <p class="mt-2 text-customBlue font-DMSans text-sm font-normal cursor-pointer">Luxury Communities</p>
     <p class="mt-2 text-customBlue font-DMSans text-sm font-normal cursor-pointer">Franchise</p>
@@ -474,7 +492,7 @@
     <p class="mt-2 text-customBlue font-DMSans text-sm font-normal cursor-pointer">Other</p>
   </div>
 
-  <div class="w-1/2">
+  <div class="w-1/2 mt-6 sm:mt-0">
     <span class="block text-customBlue font-lato text-lg font-extrabold leading-6">COMPANY</span>
     <p class="mt-2 text-customBlue font-DMSans text-sm font-normal cursor-pointer">About Us</p>
     <p class="mt-2 text-customBlue font-DMSans text-sm font-normal cursor-pointer">Our Team</p>
@@ -484,7 +502,7 @@
     <p class="mt-2 text-customBlue font-DMSans text-sm font-normal cursor-pointer">Press & Media</p>
   </div>
 
-  <div class="w-1/2">
+  <div class="w-1/2 mt-6 sm:mt-0">
     <span class="block text-customBlue font-lato text-lg font-extrabold leading-6">COMPANY</span>
     <p class="mt-2 text-customBlue font-DMSans text-sm font-normal cursor-pointer">Careers</p>
     <p class="mt-2 text-customBlue font-DMSans text-sm font-normal cursor-pointer">Applicants Privacy</p>
@@ -496,7 +514,7 @@
     <p class="mt-2 text-customBlue font-DMSans text-sm font-normal cursor-pointer">@LinkedIn</p>
   </div>
 
-  <div class="w-1/2">
+  <div class="w-1/2 mt-6 sm:mt-0">
     <h3 class="mt-2 text-customBlue font-lato text-lg font-extrabold leading-6">BLOG</h3>
     <p class="mt-2 text-customBlue font-DMSans text-sm font-normal">Read the latest Digital</p>
     <p class="mt-2 text-customBlue font-DMSans text-sm font-normal">Marketing news</p>
@@ -511,19 +529,21 @@
   </div>
 </div>
 
+
 <!--Contact Us Section-->
-<div class="mt-5 bg-customlightGrayishBlue border-t border-b border-gray-300 flex justify-center text-center">
-  <div class="mt-9 mr-2">
-    <img src="/images/call_1.svg" alt="">
+<div class="mt-5 bg-customlightGrayishBlue border-t border-b border-gray-300 flex flex-col sm:flex-row justify-center items-center text-center sm:text-left">
+  <div class="mt-5 sm:mt-9 sm:mr-2">
+    <img src="/images/call_1.svg" alt="" class="mx-auto sm:mx-0">
   </div>
-  <div class="mt-2 flex flex-col justify-end">
-    <span class="text-3xl text-customBlue font-montserrat font-extrabold leading-[40.5px]">Need Help? Say Hello</span>
-    <p class="mt-1 text-sm text-customBlue font-DMSans font-medium leading-5">Ready to speak with a marketing expert? Give us a ring</p>
+  <div class="mt-2 sm:flex sm:flex-col sm:justify-end">
+    <span class="text-2xl sm:text-3xl text-customBlue font-montserrat font-extrabold leading-tight sm:leading-[40.5px]">Need Help? Say Hello</span>
+    <p class="mt-2 text-base sm:text-sm text-customBlue font-DMSans font-medium leading-5">Ready to speak with a marketing expert? Give us a ring</p>
   </div>
-  <div class="w-[35%] mt-8">
-    <span class="text-4xl text-customBlue font-montserrat font-extrabold leading-none">800-569-2754</span>
+  <div class="w-full sm:w-[35%] mt-2 sm:mt-8 sm:ml-20">
+    <span class="text-2xl sm:text-4xl text-customBlue font-montserrat font-extrabold leading-tight sm:leading-none">800-569-2754</span>
   </div>
 </div>
+
 
 <!--Footer with Copyright-->
 <div class="mx-auto mt-5 w-3/5 text-center">
